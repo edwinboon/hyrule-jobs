@@ -1,12 +1,19 @@
 <template>
-    <div class="app">
-      <header>
+  <div class="app">
+    <header>
+      <div class="title">
+        <img src="./assets/heart.svg" alt="site logo">
+        <h1>Hyrule Jobs</h1>
+      </div>
+      <div class="order">
         <button @click="handleClick('title')">Order by title</button>
         <button @click="handleClick('salary')">Order by salary</button>
         <button @click="handleClick('location')">Order by location</button>
-      </header>
-      <job-list :jobs="jobs" :order="order" />
-    </div>
+      </div>
+    </header>
+
+    <JobList :jobs="jobs" :order="order" />
+  </div>
 </template>
 
 <script lang="ts">

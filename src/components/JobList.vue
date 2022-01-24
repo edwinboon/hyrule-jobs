@@ -1,18 +1,18 @@
 <template>
   <div class="job-list">
-    <p>Ordered by <strong>{{ order }} </strong></p>
-    <ul>
+    <p>Ordered by {{ order }}</p>
+    <transition-group name="list" tag="ul">
       <li v-for="job in orderedJobs" :key="job.id">
-        <h2>{{ job.title }} in {{ job.location}} </h2>
+        <h2>{{ job.title }} in {{ job.location }}</h2>
         <div class="salary">
+          <img src="../assets/rupee.svg" alt="rupee icon">
           <p>{{ job.salary }} rupees</p>
         </div>
         <div class="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab molestiae impedit quibusdam quia dolores blanditiis totam perferendis distinctio! 
-          Repellat, nihil! Explicabo aspernatur nihil illum neque deserunt reprehenderit tenetur a delectus.
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem omnis voluptatum eius doloremque optio iusto sequi dignissimos. Pariatur earum assumenda dolores possimus quidem quam, reprehenderit aliquid consequuntur amet non facere.</p>
         </div>
       </li>
-    </ul>
+    </transition-group>
   </div>
 </template>
 
