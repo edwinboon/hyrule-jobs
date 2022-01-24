@@ -1,12 +1,12 @@
 <template>
-  <header>
     <div class="app">
-      <button @click="handleClick('title')">Order by title</button>
-      <button @click="handleClick('salary')">Order by salary</button>
-      <button @click="handleClick('location')">Order by location</button>
+      <header>
+        <button @click="handleClick('title')">Order by title</button>
+        <button @click="handleClick('salary')">Order by salary</button>
+        <button @click="handleClick('location')">Order by location</button>
+      </header>
       <job-list :jobs="jobs" :order="order" />
     </div>
- </header>
 </template>
 
 <script lang="ts">
